@@ -1,3 +1,39 @@
 .reveal pre code {
   max-height: 500px;
 }
+
+/* Tighter list spacing for denser slides */
+.reveal .slides section ul,
+.reveal .slides section ol {
+  margin-top: 0.2em;
+  margin-bottom: 0.2em;
+}
+
+.reveal .slides section li {
+  font-size: 0.85em;
+  line-height: 1.4;
+  margin-bottom: 0.15em;
+}
+
+.reveal .slides section li li {
+  font-size: 0.95em;
+}
+
+/* Slightly smaller headings to leave more room for content */
+.reveal h2 {
+  font-size: 1.4em;
+}
+
+/* Two-column layout — use with <div class="two-col"><div>...</div><div>...</div></div> */
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 2em;
+  text-align: left;
+  font-size: 0.9em;
+}
+
+.two-col ul {
+  margin-left: 0;
+  padding-left: 1.2em;
+}
