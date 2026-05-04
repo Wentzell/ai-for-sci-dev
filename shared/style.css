@@ -1,39 +1,136 @@
-.reveal pre code {
-  max-height: 500px;
+/* ==========================================================
+   Custom theme overlay on top of reveal.js v6 `black`.
+   Uses the v6 --r-* custom-property surface so we don't
+   fight specificity against dist/theme/black.css.
+
+   Inspirations:
+   - Dracula theme: heading scale + accent-color vocabulary
+   - Default themes: judiciously override h-size cascade
+     (3.77/2.11/1.55em is hostile to dense technical content)
+   ========================================================== */
+
+:root {
+  /* Heading scale — Dracula's tighter cascade.
+     Default black is 3.77 / 2.11 / 1.55 / 1em — way too big. */
+  --r-heading1-size: 2.0em;
+  --r-heading2-size: 1.4em;
+  --r-heading3-size: 1.15em;
+  --r-heading4-size: 1.0em;
+
+  --r-heading-font-weight: 600;
+  --r-heading-text-transform: none;
+  --r-heading-letter-spacing: normal;
+  --r-heading-line-height: 1.15;
+  --r-heading-margin: 0 0 0.4em 0;
+
+  /* Kill the dated 12-stack drop-shadow on h1 from `black` */
+  --r-heading1-text-shadow: none;
+
+  /* Code font — Dracula's well-tested mono stack */
+  --r-code-font: "Fira Code", Menlo, Consolas, Monaco,
+                 "Liberation Mono", "Lucida Console", monospace;
+
+  /* Accent palette (Dracula-inspired, dialled down for `black`)  */
+  --accent-inline-code: #50fa7b;   /* green — for `/commands`, identifiers */
+  --accent-bullet:      #8be9fd;   /* cyan — list markers */
+  --accent-rule:        #82aaff;   /* matches link color */
+  --muted-bg:           rgba(255, 255, 255, 0.04);
 }
 
-/* Tighter list spacing for denser slides */
+/* ----- Inline code: green accent so command names like /rewind pop ----- */
+.reveal :not(pre) > code {
+  color: var(--accent-inline-code);
+  background: var(--muted-bg);
+  padding: 0 0.25em;
+  border-radius: 3px;
+  font-size: 0.92em;
+}
+
+/* ----- Bullet markers: cyan accent for scannable dense lists ----- */
+.reveal .slides section ul > li::marker {
+  color: var(--accent-bullet);
+}
+
+/* ----- Lists: tighter spacing, smaller indent than reveal default 40px ----- */
 .reveal .slides section ul,
 .reveal .slides section ol {
   margin-top: 0.2em;
   margin-bottom: 0.2em;
+  padding-left: 1.1em;
 }
 
 .reveal .slides section li {
-  font-size: 0.85em;
-  line-height: 1.4;
-  margin-bottom: 0.15em;
+  font-size: 0.78em;
+  line-height: 1.35;
+  margin-bottom: 0.1em;
 }
 
 .reveal .slides section li li {
   font-size: 0.95em;
 }
 
-/* Slightly smaller headings to leave more room for content */
-.reveal h2 {
-  font-size: 1.4em;
+/* ----- Paragraphs: tighter than reveal default ----- */
+.reveal p {
+  font-size: 0.85em;
+  line-height: 1.35;
+  margin: 0.3em 0;
 }
 
-/* Two-column layout — use with <div class="two-col"><div>...</div><div>...</div></div> */
+/* ----- Code blocks: drop the 90% width waste; smaller font; tab-size ----- */
+.reveal pre {
+  width: 100%;
+  margin: 0.4em auto;
+  font-size: 0.5em;
+  line-height: 1.3;
+  box-shadow: none;
+}
+
+.reveal pre code {
+  max-height: 520px;
+  padding: 0.7em 0.9em;
+  tab-size: 2;
+  border-radius: 4px;
+}
+
+.reveal code { font-size: 0.95em; }
+
+/* ----- Blockquote as a left-rule callout, not a wide pull-quote ----- */
+.reveal blockquote {
+  font-size: 0.85em;
+  font-style: normal;
+  width: auto;
+  margin: 0.5em 0;
+  padding: 0.3em 0 0.3em 0.9em;
+  background: none;
+  border-left: 3px solid var(--accent-rule);
+  box-shadow: none;
+}
+
+/* ----- Tables: smaller default ----- */
+.reveal table { font-size: 0.7em; }
+
+/* ----- Two-column layout helper ----- */
 .two-col {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 0 2em;
+  gap: 0 1.5em;
   text-align: left;
-  font-size: 0.9em;
+  font-size: 0.95em;
 }
 
 .two-col ul {
   margin-left: 0;
-  padding-left: 1.2em;
+  padding-left: 1.1em;
+}
+
+.two-col p,
+.two-col li {
+  font-size: 0.95em;
+  line-height: 1.3;
+}
+
+.two-col h3,
+.two-col h4,
+.two-col strong {
+  font-size: 0.95em;
 }

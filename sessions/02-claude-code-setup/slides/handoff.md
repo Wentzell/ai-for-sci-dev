@@ -1,0 +1,24 @@
+# Recap
+
+- **Install** → native installer, `/login`
+- **Settings + CLAUDE.md** → user *&* project scopes
+- **Sessions** → `claude -c`, `Esc`, `Esc Esc`, `/resume`, `/fork`
+- **Modes** → `Shift+Tab` cycle, plan mode for serious work
+- **Slash commands** → `/config`, `/context`, `/model`, `/powerup`
+- **Skills** → reusable workflows, two scopes
+
+---
+
+# Over to Matt
+
+**Same toolset, inside VS Code →**
+
+---
+
+## Pointers
+
+- Docs — <https://docs.claude.com/en/docs/claude-code>
+- This series — <https://wentzell.github.io/ai-for-sci-dev/>
+- Take-home samples — `sessions/02-claude-code-setup/examples/`
+
+*Questions, ideas, war stories — bring them to the next session.*

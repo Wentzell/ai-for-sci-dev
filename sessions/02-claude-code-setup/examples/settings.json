@@ -1,0 +1,57 @@
+{
+  "model": "claude-sonnet-4-6",
+  "theme": "dark-ansi",
+  "editorMode": "vim",
+
+  "env": {
+    "EDITOR": "vim",
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "CMAKE_EXPORT_COMPILE_COMMANDS": "ON",
+    "CMAKE_COLOR_DIAGNOSTICS": "ON"
+  },
+
+  "attribution": {
+    "commit": "Co-Authored-By: Claude <noreply@anthropic.com>"
+  },
+
+  "permissions": {
+    "defaultMode": "default",
+    "allow": [
+      "Read",
+      "WebFetch",
+      "WebSearch",
+
+      "Bash(ls *)",
+      "Bash(cat *)",
+      "Bash(file *)",
+      "Bash(which *)",
+      "Bash(module *)",
+
+      "Bash(git status)",
+      "Bash(git log *)",
+      "Bash(git diff *)",
+      "Bash(git show *)",
+      "Bash(git branch *)",
+
+      "Bash(cmake *)",
+      "Bash(ctest *)",
+      "Bash(ninja *)",
+      "Bash(make *)",
+      "Bash(cloc *)",
+
+      "Bash(nm *)",
+      "Bash(objdump *)",
+      "Bash(ldd *)",
+      "Bash(pprof *)",
+
+      "Bash(gh pr view *)",
+      "Bash(gh issue view *)",
+      "Bash(gh run view *)"
+    ],
+    "deny": [
+      "Edit(~/.ssh/**)",
+      "Edit(**/.env*)",
+      "Read(./.env)"
+    ]
+  }
+}
