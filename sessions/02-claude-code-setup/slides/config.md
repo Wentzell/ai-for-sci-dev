@@ -105,7 +105,7 @@ Open `/config` and look at the permissions panel — or open `~/.claude/settings
 
 What belongs there:
 
-- Build invocation pattern (`cmake` + `ninja` + `ctest`)
+- Build invocation: `cmake` / `ninja` / `ctest`
 - Module-load default, NFS hygiene rules
 - Domain rules (e.g. DLR is only valid for spectral quantities)
 - Test-reference workflow

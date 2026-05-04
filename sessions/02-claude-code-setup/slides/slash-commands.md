@@ -35,7 +35,7 @@
 
 ## Try it now — `/powerup`
 
-Run `/powerup`, pick one of the 10 lessons, read it, try it.
+Run `/powerup` → pick a lesson → try it.
 
 Suggested picks for sci-dev *(topics not yet covered today)*:
 

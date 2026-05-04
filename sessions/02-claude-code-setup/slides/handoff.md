@@ -17,8 +17,8 @@
 
 ## Pointers
 
-- Docs — <https://docs.claude.com/en/docs/claude-code>
-- This series — <https://wentzell.github.io/ai-for-sci-dev/>
+- Docs — [docs.claude.com/en/docs/claude-code](https://docs.claude.com/en/docs/claude-code)
+- This series — [wentzell.github.io/ai-for-sci-dev](https://wentzell.github.io/ai-for-sci-dev/)
 - Take-home samples — `sessions/02-claude-code-setup/examples/`
 
 *Questions, ideas, war stories — bring them to the next session.*

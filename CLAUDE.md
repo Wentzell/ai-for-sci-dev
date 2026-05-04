@@ -36,3 +36,15 @@ Reveal.js 6.x is loaded entirely from `https://unpkg.com/reveal.js@6/` — no lo
 - Vertical slide break: blank line, `----`, blank line
 - Speaker notes: `Note:` on its own line
 - Code blocks: fenced with language tag (e.g. ` ```cpp `) for syntax highlighting
+
+## Slide Layout
+
+- `shared/style.css` applies `text-wrap: balance` to `p`, `li`, and `blockquote` — short blocks wrap evenly instead of orphaning a final word. Try CSS-level fixes before rewriting copy.
+- Long bullets that wrap on a parenthetical aside or trailing punctuation (`,`, `:`, `.`) often orphan the tail. Restructure or drop the trailing token rather than fighting the wrap.
+
+## Local Iteration
+
+`python3 -m http.server` serves with default caching, so editing `shared/style.css` or a `slides/*.md` file isn't picked up by a normal reload. To pick up changes:
+
+- CSS only: in DevTools, `link.href = link.href.split('?')[0] + '?cb=' + Date.now()` on the `shared/style.css` `<link>` element
+- Markdown changes: full reload with a cache-busting URL parameter (`?v=...`) so Reveal's markdown plugin refetches

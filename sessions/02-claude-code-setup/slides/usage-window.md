@@ -2,7 +2,7 @@
 
 The 5-hour window starts on your **first message** of a new period — not at midnight.
 
-Send an automated `hi` early in the day to align the reset to a useful time:
+Send an automated `hi` early to align the reset
 
 > 8:30 AM ping → window resets at **1:30 PM** — fresh block right after lunch.
 
@@ -25,11 +25,11 @@ crontab -l
 cat ~/.claude-warmup.log    # after the first scheduled run
 ```
 
-For a reset at time `T`, schedule at `T − 5h`.
+Reset at time `T` → schedule at `T − 5h`
 
 ---
 
-## Caveats
+## ⚠️ Caveats
 
 - Workstation must be on and not suspended at trigger time
 - If cron's stripped env can't find `node`, wrap as

@@ -11,10 +11,6 @@
 - Runs through the permissions allowlist without asking
 - Faster once you trust the direction
 
-**`auto`**
-- Continuous execution — no prompts within the sandbox
-- For unattended runs after a plan is approved
-
 </div>
 <div>
 
@@ -23,12 +19,16 @@
 - Produces a plan, requires explicit approval before any change
 - The mode for scientific software work
 
+**`auto`**
+- Continuous execution — no prompts within the sandbox
+- For unattended runs after a plan is approved
+
 </div>
 </div>
 
-**`Shift+Tab` cycles** `default → acceptEdits → plan`
+**`Shift+Tab` cycles** `default → acceptEdits → plan → auto`
 
-*(`auto`, `dontAsk`, `bypassPermissions` exist outside the default cycle — pick via the mode selector.)*
+*(`dontAsk` and `bypassPermissions` exist outside the cycle — pick via the mode selector.)*
 
 ---
 
@@ -54,7 +54,7 @@ Concrete example to mention live: the DLR validity rule in my CLAUDE.md catches 
 *(audience watches)*
 
 - Small, concrete ask
-- Enter plan mode (`Shift+Tab`)
+- `Shift+Tab` into plan mode
 - Watch it explore — point out file paths it picks up
 - Read the produced plan
 - Approve → manual review (safest for the demo)

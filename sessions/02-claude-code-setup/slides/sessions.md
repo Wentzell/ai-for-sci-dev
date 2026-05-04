@@ -3,12 +3,11 @@
 From the shell:
 
 - `claude` — new session in the current directory
-- `claude -c` / `--continue` — most recent session for *this* directory
-- `claude -r` / `--resume` — interactive picker across past sessions
-- `claude -p "..."` / `--print` — one-shot, non-interactive (great for scripts & pipes)
+- `claude -c` — continue the most recent session for *this* directory
+- `claude -r` — interactive picker across past sessions
+- `claude -p "..."` — one-shot, non-interactive (great for scripts & pipes)
 
-Sessions are **per working directory**, stored under
-`~/.claude/projects/<slug-of-cwd>/`
+Sessions are stored per working dir: `~/.claude/projects/<slug-of-cwd>/`
 
 ---
 

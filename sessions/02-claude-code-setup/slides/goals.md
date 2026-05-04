@@ -3,7 +3,7 @@
 - **Install** Claude Code on the terminal
 - **Configure** sensibly — user *&* project scope
 - **Start** a session — new, continue, resume, fork
-- **Modes** — `default`, `acceptEdits`, `auto`, `plan`
+- **Modes** — `default`, `acceptEdits`, `plan`, `auto`
 - **Slash commands** worth knowing
 - **Skills** — your own reusable workflows
 

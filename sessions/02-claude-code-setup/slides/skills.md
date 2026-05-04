@@ -1,8 +1,8 @@
 # Skills
 
-A **skill** is a small reusable bundle of instructions (and optionally helper files) that extends Claude with a named capability. Once installed, invoke with `/<skill-name>`.
+A **skill** is a reusable bundle of instructions that extends Claude with a named capability. Invoke with `/<skill-name>`.
 
-**Two scopes** — same pattern as settings & `CLAUDE.md`:
+**Two scopes** — same pattern as settings & `CLAUDE.md`
 
 - **User-level**: `~/.claude/skills/<name>/SKILL.md` — available everywhere
 - **Project-level**: `<repo>/.claude/skills/<name>/SKILL.md` — checked into the repo
